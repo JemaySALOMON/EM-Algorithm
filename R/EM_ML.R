@@ -134,10 +134,14 @@ EM_ML <- function(y, X, Z, K,
   beta <- XtVinvX_inv %*% XtVinv %*% y
   u <- Vu * K %*% t(Z) %*% Vinv %*% (y - X %*% beta)
 
+  y_hat <- X %*% beta + Z %*% u
+  genos <- colnames(Z)
+  y_hat_genos <- tapply(as.numeric(y_hat), c(genos, genos), mean)
+
   return(list(
     beta = beta,
     u = u,
-    blue =  as.numeric(beta[1])+u,
+    blue =  y_hat_genos,
     Vu = Vu,
     Ve = Ve,
     loglik = loglik,

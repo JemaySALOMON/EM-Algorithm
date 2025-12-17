@@ -1,5 +1,5 @@
 
-#' EM algorithm for Maximum Likelihood estimation in Linear Mixed Models
+#' EM-ML algorithm for Linear Mixed Models
 #'
 #' Fits the model: $$y = X\beta + Zu + e$$
 #' where

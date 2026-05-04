@@ -156,7 +156,7 @@ EM_REML <- function(y, X, Z, K,
   y_hat_genos <- tapply(as.numeric(y_hat), c(genos, genos), mean)
   list(
     beta = beta,
-    blue = y_hat_genos, # BLUE
+    fitted_values_mean = y_hat_genos, # BLUE
     u = u,         # BLUP
     Vu = Vu,       # σ²_u (REML)
     Ve = Ve,       # σ²_e (REML)

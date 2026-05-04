@@ -141,7 +141,7 @@ EM_ML <- function(y, X, Z, K,
   return(list(
     beta = beta,
     u = u,
-    blue =  y_hat_genos,
+    fitted_values_mean =  y_hat_genos,
     Vu = Vu,
     Ve = Ve,
     loglik = loglik,
